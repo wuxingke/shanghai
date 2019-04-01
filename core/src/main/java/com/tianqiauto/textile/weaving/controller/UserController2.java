@@ -3,16 +3,14 @@ package com.tianqiauto.textile.weaving.controller;
 
 import com.tianqiauto.textile.weaving.model.base.User;
 import com.tianqiauto.textile.weaving.repository.UserRepository;
-import com.tianqiauto.textile.weaving.util.result.Result;
 import com.tianqiauto.textile.weaving.util.log.Logger;
+import com.tianqiauto.textile.weaving.util.result.Result;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -32,6 +30,7 @@ public class UserController2 {
 //    @PreAuthorize("hasAuthority('USER_VIEW')")
 //    @PreAuthorize("hasAnyAuthority('ROLE_RR1')")
     public List<User> findAll(@PageableDefault(size = 15,page = 0,sort = "username,asc") Pageable pageable, Principal principal){
+
 
         System.out.println(pageable.getPageSize());
         System.out.println(pageable.getPageNumber());

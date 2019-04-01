@@ -1,4 +1,4 @@
-package com.tianqiauto.textile.weaving.service;
+package com.tianqiauto.textile.weaving.service.jichushezhi;
 
 
 import com.tianqiauto.textile.weaving.model.sys.Param;
@@ -25,6 +25,7 @@ public class SheBeiParamService {
         gx_id = StringUtils.isEmpty(gx_id)?null:gx_id;
         jx_id = StringUtils.isEmpty(jx_id)?null:jx_id;
         cslb_id = StringUtils.isEmpty(cslb_id)?null:cslb_id;
+
 
         ProcedureParamUtlis ppu=new ProcedureParamUtlis();
         ppu.addInVarchar(gx_id).addInVarchar(jx_id).addInVarchar(cslb_id);
